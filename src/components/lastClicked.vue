@@ -1,19 +1,20 @@
 <template>
   <div v-bind:class="cardStyle">
+    <p>Last Selected Card:</p>
     <div v-bind:class="headerStyle">
-      <h2>{{}}</h2>
-      <button>…</button>
+      <h2>{{ name }}</h2>
     </div>
     <div v-bind:class="bottomStyle">
-      <h3></h3>
-      <p></p>
-      <p></p>
+      <h3>{{ adress }}</h3>
+      <p>{{ phone }}</p>
+      <p>{{ email }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: ["name", "phone", "adress", "email"],
   data: function(){
      return {
        cardStyle: "cardStyle1",
@@ -49,7 +50,6 @@ export default {
 
 .headerStyle1 > h2 {
   font-family: 'Lato', sans-serif;
-  letter-spacing: .3em;
   font-weight: 700;
   color: #f3Bdac;
   margin: 0px;
