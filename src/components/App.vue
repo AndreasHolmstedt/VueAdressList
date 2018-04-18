@@ -146,7 +146,7 @@
 
  input {
   padding: 5px;
-  color: #0f5355; 
+  color: #0f5355;
  }
 
 </style>
@@ -157,6 +157,14 @@
     display: flex;
     flex-direction: row;
   }
+
+
+@media(max-width: 750px){
+  #app {
+    flex-direction: column;
+  }
+
+}
 
   #app > div > * {
     min-width: 320px;
