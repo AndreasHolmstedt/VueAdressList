@@ -105,7 +105,8 @@ export default {
 }
 
 .headerStyle1 > input {
-  padding-left: 1em;
+  margin-left: 1.2em;
+
 }
 
 .headerStyle1 > button {
@@ -119,6 +120,14 @@ export default {
   margin-right: .5em;
 }
 
+.selected {
+  outline: 3px solid #36859f;
+}
+
+.selected .headerStyle1 {
+  background-color: #36859f;
+}
+
 .headerStyle1 > button:first-of-type:focus {
   outline: 0;
 }
@@ -126,7 +135,6 @@ export default {
 .bottomStyle1 {
     color: #137477;
     position: relative;
-    border: 3px solid #137477;
     border-top: none;
     margin: 0px;
     flex:1 1 400px;

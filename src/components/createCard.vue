@@ -1,7 +1,7 @@
 <template>
   <div v-bind:class="cardStyle">
     <div v-bind:class="headerStyle">
-      <p>Create New Card</p>
+      <p>Add Contact</p>
     </div>
     <div v-bind:class="bottomStyle">
       <input v-model="name" placeholder="Name"></input>
@@ -47,7 +47,6 @@ export default {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   max-width: 320px;
-  height: 250px;
   margin: 20px;
   background-color: #F4F4F4;
   display: flex;
@@ -60,11 +59,11 @@ export default {
 .headerStyle1 {
   margin: 0px;
   padding: 0px;
-  height: 100px;
   background-color: #137477;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 2em;
 }
 
 .headerStyle1 > p {
@@ -103,7 +102,7 @@ export default {
     border: 3px solid #137477;
     border-top: none;
     margin: 0px;
-    flex:1 1 400px;
+    flex:1 1 auto;
     padding: 10px;
 }
 

@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div>
+      <create-card v-on:createCard="createNewCard" />
+      <last-clicked :name="recentlyClicked.name" :phone="recentlyClicked.phone" :adress="recentlyClicked.adress" :email="recentlyClicked.email" />
+    </div>
     <div class="cards">
       <list-card
         v-for="(item, index) in dataList"
@@ -12,11 +16,8 @@
         :adress="item.adress"
         :email="item.email"
       />
-      <create-card v-on:createCard="createNewCard" />
   </div>
-    <div class="clicked">
-      <last-clicked :name="recentlyClicked.name" :phone="recentlyClicked.phone" :adress="recentlyClicked.adress" :email="recentlyClicked.email" />
-    </div>
+
   </div>
 </template>
 
@@ -142,22 +143,30 @@
 
 <style>
 
+
+ input {
+  padding: 5px;
+  color: #0f5355; 
+ }
+
 </style>
 
 <style scoped>
   #app {
     text-align: center;
+    display: flex;
+    flex-direction: row;
   }
 
+  #app > div > * {
+    min-width: 320px;
+  }
   .cards {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
   }
 
-  .selected {
-    outline: 3px solid #7CB6C9;
-  }
 
   #app h1 {
     color: #2c3e50;

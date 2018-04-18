@@ -1,6 +1,6 @@
 <template>
   <div v-bind:class="cardStyle">
-    <p>Last Selected Card:</p>
+    <p>Last Selected Contact</p>
     <div v-bind:class="headerStyle">
       <h2>{{ name }}</h2>
     </div>
@@ -39,6 +39,10 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+p {
+  color: #137477;
 }
 
 .headerStyle1 {
